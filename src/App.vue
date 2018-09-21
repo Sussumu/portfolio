@@ -1,12 +1,25 @@
 <template>
   <div id="app">
-    <section id="landing-section"></section>
-		<section id="intro"></section>
+    <section id="landing-section">
+			<button @click="scrollToSection()"></button>
+		</section>
+		<section id="intro" ref="intro"></section>
 		<section id="competencies"></section>
 		<section id="photos"></section>
 		<section id="contact-form"></section>
   </div>
 </template>
+
+<script>
+export default {
+	methods: {
+		scrollToSection() {
+			this.$refs.intro.scrollIntoView({ behavior: "smooth" });
+		}
+	}
+};
+</script>
+
 
 <style lang="scss" scoped>
 #app {
