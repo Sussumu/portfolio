@@ -1,15 +1,22 @@
 <template>
   <div id="app">
-    <section id="landing-section">
+    <section id="landing-section" class="fill-screen">
 			<div id="title">GABRIEL KATO</div>
 			<div @click="scrollToSection('intro')">
-				<img class="snap-scroll" src="./assets/down-arrow.png" alt="Myself giving a talk about GraphQL">
+				<img class="snap-scroll" src="./assets/down-arrow.png" alt="myself giving a talk about GraphQL" />
 			</div>
 		</section>
-		<section id="intro" ref="intro"></section>
-		<section id="competencies"></section>
-		<section id="photos"></section>
-		<section id="contact-form"></section>
+		<section id="intro" class="fill-half-screen" ref="intro">
+			<div id="my-photo">
+				<img src="./assets/myself.jpg" alt="a photo showing my face" />
+			</div>
+			<div id="about-me">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, neque nec vulputate posuere, velit sem sagittis sapien, sit amet pellentesque elit metus nec elit. Donec vel dolor mauris. Curabitur interdum, neque ac pellentesque convallis, sapien tellus mollis erat, et consectetur velit justo nec ante. Mauris maximus euismod lorem, sed egestas urna ullamcorper in. Etiam ut purus elementum, dictum elit ut, eleifend nisi. Fusce euismod neque pretium, dictum nibh at, iaculis urna. Phasellus sagittis lectus ac ex ultricies hendrerit. Duis consequat ligula ac enim malesuada laoreet. Proin et arcu convallis, vehicula nibh nec, pharetra dui. In augue justo, feugiat non aliquet sit amet, bibendum sed tellus.
+			</div>
+		</section>
+		<section id="competencies" class="fill-screen"></section>
+		<section id="photos" class="fill-screen"></section>
+		<section id="contact-form" class="fill-screen"></section>
   </div>
 </template>
 
@@ -17,7 +24,7 @@
 export default {
 	methods: {
 		scrollToSection(section) {
-			this.$refs[section].scrollIntoView({ behavior: "smooth" });
+			this.$refs[section].scrollIntoView({ behavior: "smooth", block: "start" });
 		}
 	}
 };
@@ -51,34 +58,47 @@ export default {
 #landing-section {
 	background: url("./assets/landing-image.jpg") no-repeat center center fixed;
 	background-size: cover;
-	width: 100%;
-	height: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
 #intro {
-	background-color: #5aafd1;
-	width: 100vw;
-	height: 100vh;
+	display: flex;
+	justify-content: space-around;	
+}
+
+#intro div {
+	margin: auto;
+	padding: 40px;
+}
+
+#intro #my-photo img {
+	max-width: 30vw;
+	max-height: 30vh;
+	border-radius: 130px;
 }
 
 #competencies {
-	background-color: #625ad1;
-	width: 100vw;
-	height: 100vh;
+	background-image: linear-gradient(to right top, #9ef2c2, #21e8ea, #00d5ff, #77b4ff, #de84f0);
 }
 
 #photos {
 	background-color: #d15a96;
-	width: 100vw;
-	height: 100vh;
 }
 
 #contact-form {
 	background-color: #d1cf5a;
+}
+
+// general
+.fill-screen {
 	width: 100vw;
 	height: 100vh;
+}
+
+.fill-half-screen {
+	width: 100vw;
+	height: 50vh;
 }
 </style>
