@@ -1,8 +1,9 @@
 <template>
   <div id="app">
     <section id="landing-section">
-			<div  @click="scrollToSection('intro')">
-				<img class="snap-scroll" src="./assets/down-arrow.png">
+			<div id="title">GABRIEL KATO</div>
+			<div @click="scrollToSection('intro')">
+				<img class="snap-scroll" src="./assets/down-arrow.png" alt="Myself giving a talk about GraphQL">
 			</div>
 		</section>
 		<section id="intro" ref="intro"></section>
@@ -23,6 +24,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./styles/main.scss";
+
 #app {
 	width: 100%;
 	height: 100%;
@@ -30,6 +33,12 @@ export default {
 
 .grid {
 	display: grid;
+}
+
+#title {
+	font-family: $default-fonts;
+	font-size: 60px;
+	color: white;
 }
 
 .snap-scroll {
@@ -44,6 +53,9 @@ export default {
 	background-size: cover;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 #intro {
