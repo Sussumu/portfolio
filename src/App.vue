@@ -65,7 +65,7 @@ export default {
 
 #intro {
 	display: flex;
-	justify-content: space-around;	
+	justify-content: space-around;
 }
 
 #intro div {
@@ -93,12 +93,12 @@ export default {
 
 // general
 .fill-screen {
-	width: 100vw;
+	width: 100%;
 	height: 100vh;
 }
 
 .fill-half-screen {
-	width: 100vw;
+	width: 100%;
 	height: 50vh;
 }
 </style>
