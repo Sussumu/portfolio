@@ -14,9 +14,9 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, neque nec vulputate posuere, velit sem sagittis sapien, sit amet pellentesque elit metus nec elit. Donec vel dolor mauris. Curabitur interdum, neque ac pellentesque convallis, sapien tellus mollis erat, et consectetur velit justo nec ante. Mauris maximus euismod lorem, sed egestas urna ullamcorper in. Etiam ut purus elementum, dictum elit ut, eleifend nisi. Fusce euismod neque pretium, dictum nibh at, iaculis urna. Phasellus sagittis lectus ac ex ultricies hendrerit. Duis consequat ligula ac enim malesuada laoreet.
 			</div>
 		</section>
-		<section id="competencies" class="fill-screen">
+		<section id="competencies">
 			<card-hover :img-src="vueImage" message="Vue.JS" />
-			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="dotNetCoreImage" message=".NET Core" />
 			<card-hover :img-src="vueImage" message="Vue.JS" />
 			<card-hover :img-src="vueImage" message="Vue.JS" />
 			<card-hover :img-src="vueImage" message="Vue.JS" />
@@ -30,11 +30,13 @@
 <script>
 import CardHover from "./components/CardHover.vue";
 import VueImage from "./assets/vue-card-image.jpg";
+import DotNetCoreImage from "./assets/net-core-card-image.png";
 
 export default {
 	data() {
 		return {
-			vueImage: VueImage
+			vueImage: VueImage,
+			dotNetCoreImage: DotNetCoreImage
 		};
 	},
 	components: {
@@ -114,13 +116,14 @@ export default {
 		#de84f0
 	);
 	display: flex;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .card-hover {
 	border: 1px solid #000;
-	flex: 1 1 33%;
+	flex: 0 1 auto;
 	margin: 40px;
 }
 
