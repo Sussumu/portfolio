@@ -11,17 +11,29 @@
 				<img src="./assets/myself.jpg" alt="a photo showing my face" />
 			</div>
 			<div id="about-me">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, neque nec vulputate posuere, velit sem sagittis sapien, sit amet pellentesque elit metus nec elit. Donec vel dolor mauris. Curabitur interdum, neque ac pellentesque convallis, sapien tellus mollis erat, et consectetur velit justo nec ante. Mauris maximus euismod lorem, sed egestas urna ullamcorper in. Etiam ut purus elementum, dictum elit ut, eleifend nisi. Fusce euismod neque pretium, dictum nibh at, iaculis urna. Phasellus sagittis lectus ac ex ultricies hendrerit. Duis consequat ligula ac enim malesuada laoreet. Proin et arcu convallis, vehicula nibh nec, pharetra dui. In augue justo, feugiat non aliquet sit amet, bibendum sed tellus.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales, neque nec vulputate posuere, velit sem sagittis sapien, sit amet pellentesque elit metus nec elit. Donec vel dolor mauris. Curabitur interdum, neque ac pellentesque convallis, sapien tellus mollis erat, et consectetur velit justo nec ante. Mauris maximus euismod lorem, sed egestas urna ullamcorper in. Etiam ut purus elementum, dictum elit ut, eleifend nisi. Fusce euismod neque pretium, dictum nibh at, iaculis urna. Phasellus sagittis lectus ac ex ultricies hendrerit. Duis consequat ligula ac enim malesuada laoreet.
 			</div>
 		</section>
-		<section id="competencies" class="fill-screen"></section>
+		<section id="competencies" class="fill-screen">
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+		</section>
 		<section id="photos" class="fill-screen"></section>
 		<section id="contact-form" class="fill-screen"></section>
   </div>
 </template>
 
 <script>
+import CardHover from "./components/CardHover.vue";
+
 export default {
+	components: {
+		CardHover
+	},
 	methods: {
 		scrollToSection(section) {
 			this.$refs[section].scrollIntoView({ behavior: "smooth", block: "start" });
@@ -79,8 +91,21 @@ export default {
 	border-radius: 130px;
 }
 
+#intro #about-me {
+	font-family: $default-fonts;
+}
+
 #competencies {
 	background-image: linear-gradient(to right top, #9ef2c2, #21e8ea, #00d5ff, #77b4ff, #de84f0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.card {
+	border: 1px solid #000;
+	flex: 1 1 50%;
+	margin: 40px;
 }
 
 #photos {
