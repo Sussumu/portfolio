@@ -3,7 +3,7 @@
 		<div class="card-front" v-if="!showCardMessage">
 			<img :src="imgSrc" />
 		</div>
-		<div class="card-front" v-else>
+		<div class="card-back" v-else>
 			<img :src="imgSrc" />
 			<span>{{message}}</span>
 		</div>
@@ -22,23 +22,23 @@ export default {
 			default: "default message :("
 		}
 	},
-	data () {
+	data() {
 		return {
 			showCardMessage: false
-		}
+		};
 	}
-}
+};
 </script>
 
 <style lang="scss" scoped>
 .card {
-	width: 150px;
-	height: 250px;
+	max-width: 150px;
+	max-height: 250px;
 }
 
-.card .card-front {
+.card .card-front,
+.card .card-back {
 	width: 100%;
 	height: 100%;
 }
 </style>
-

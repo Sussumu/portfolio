@@ -15,12 +15,12 @@
 			</div>
 		</section>
 		<section id="competencies" class="fill-screen">
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
-			<card-hover img-src="./assets/vue-card-image.jpg" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />
+			<card-hover :img-src="vueImage" message="Vue.JS" />			
 		</section>
 		<section id="photos" class="fill-screen"></section>
 		<section id="contact-form" class="fill-screen"></section>
@@ -29,14 +29,23 @@
 
 <script>
 import CardHover from "./components/CardHover.vue";
+import VueImage from "./assets/vue-card-image.jpg";
 
 export default {
+	data() {
+		return {
+			vueImage: VueImage
+		};
+	},
 	components: {
 		CardHover
 	},
 	methods: {
 		scrollToSection(section) {
-			this.$refs[section].scrollIntoView({ behavior: "smooth", block: "start" });
+			this.$refs[section].scrollIntoView({
+				behavior: "smooth",
+				block: "start"
+			});
 		}
 	}
 };
@@ -96,15 +105,22 @@ export default {
 }
 
 #competencies {
-	background-image: linear-gradient(to right top, #9ef2c2, #21e8ea, #00d5ff, #77b4ff, #de84f0);
+	background-image: linear-gradient(
+		to right top,
+		#9ef2c2,
+		#21e8ea,
+		#00d5ff,
+		#77b4ff,
+		#de84f0
+	);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.card {
+.card-hover {
 	border: 1px solid #000;
-	flex: 1 1 50%;
+	flex: 1 1 33%;
 	margin: 40px;
 }
 
