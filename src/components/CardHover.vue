@@ -1,5 +1,5 @@
 <template>
-	<div class="card" @mouseover="showCardMessage = true" @mouseout="showCardMessage = false">
+	<div class="card-hover" @mouseover="showCardMessage = true" @mouseout="showCardMessage = false">
 		<div class="card-front" v-if="!showCardMessage">
 			<img :src="imgSrc" />
 		</div>
@@ -31,14 +31,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.card {
-	max-width: 150px;
-	max-height: 250px;
+.card-front, .card-back {
+	max-width: 300px;
 }
 
-.card .card-front,
-.card .card-back {
-	width: 100%;
-	height: 100%;
+.card-hover img {
+	max-height: 100%;
+  max-width: 100%;
 }
 </style>
