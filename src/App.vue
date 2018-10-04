@@ -16,11 +16,7 @@
 		</section>
 		<section id="competencies">
 			<card-hover :img-src="vueImage" message="Vue.JS" />
-			<card-hover :img-src="dotNetCoreImage" message=".NET Core" />
-			<card-hover :img-src="vueImage" message="Vue.JS" />
-			<card-hover :img-src="vueImage" message="Vue.JS" />
-			<card-hover :img-src="vueImage" message="Vue.JS" />
-			<card-hover :img-src="vueImage" message="Vue.JS" />			
+			<card-hover :img-src="dotNetCoreImage" message=".NET Core" />		
 		</section>
 		<section id="photos" class="fill-screen"></section>
 		<section id="contact-form" class="fill-screen"></section>

@@ -1,13 +1,12 @@
 <template>
 	<div class="card-container">
-		<div class="card-hover">
-			<div class="card-front">
-				<img :src="imgSrc" />
-			</div>
-			<div class="card-back">
-				<img :src="imgSrc" />
-				<span>{{message}}</span>
-			</div>
+		<div class="card-hover" @mouseover="darken = true" @mouseout="darken = false">
+			<transition name="darken">
+				<div class="transition-container">
+					<div class="dark-layer" v-show="darken"></div>
+					<img :src="imgSrc" />
+				</div>
+			</transition>
 		</div>
 	</div>
 </template>
@@ -26,52 +25,45 @@ export default {
 	},
 	data() {
 		return {
-			showCardMessage: false
+			darken: false
 		};
 	}
 };
 </script>
 
 <style lang="scss" scoped>
-.card-container {
-	perspective: 1000px;
-}
-
-.card-container:hover {
-	transform: rotateY(180deg);
-}
-
 .card-container,
-.card-front,
-.card-back {
+.card-hover {
 	width: 200px;
 	height: 200px;
 }
 
-.card-hover {
-	transition: 0.5s;
-	transform-style: preserve-3d;
-	position: relative;
+.card-hover,
+.transition-container {
+	width: 100%;
+	height: 100%;
 }
 
-.card-front,
-.card-back {
-	backface-visibility: hidden;
+.transition-container .dark-layer,
+.transition-container img {
 	position: absolute;
-	top: 0;
-	left: 0;
+	width: 200px;
+	height: 200px;
 }
 
-.card-front {
-	z-index: 2;
+.transition-container .dark-layer {
+	z-index: 10;
+	background-color: black;
+	opacity: 0.5;
 }
 
-.card-back {
-	transform: rotateY(180deg);
+.darken-enter-active,
+.darken-leave-active {
+	transition: opacity 0.5s;
 }
 
-// .card-hover img {
-// 	max-height: 100%;
-// 	max-width: 100%;
-// }
+.darken-enter,
+.darken-leave-to {
+	opacity: 0;
+}
 </style>
