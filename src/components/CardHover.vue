@@ -3,7 +3,9 @@
 		<div class="card-hover" @mouseover="darken = true" @mouseout="darken = false">
 			<div class="transition-container">
 				<transition name="darken">
-					<div class="dark-layer" v-show="darken"></div>
+					<div class="dark-layer" v-show="darken">
+						<span class="message">{{message}}</span>
+					</div>
 				</transition>
 				<img :src="imgSrc" />
 			</div>
@@ -32,6 +34,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "../styles/main.scss";
+
 .card-container,
 .card-hover {
 	width: 200px;
@@ -54,7 +58,17 @@ export default {
 .dark-layer {
 	z-index: 10;
 	background-color: black;
-	opacity: 0.5;
+	opacity: 0.8;	
+}
+
+.dark-layer .message {
+	color: white;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	line-height: 200px;
+	font-family: $default-fonts;
+	font-size: 20px;
 }
 
 .darken-enter-active,
