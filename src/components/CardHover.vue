@@ -1,12 +1,12 @@
 <template>
 	<div class="card-container">
 		<div class="card-hover" @mouseover="darken = true" @mouseout="darken = false">
-			<transition name="darken">
-				<div class="transition-container">
+			<div class="transition-container">
+				<transition name="darken">
 					<div class="dark-layer" v-show="darken"></div>
-					<img :src="imgSrc" />
-				</div>
-			</transition>
+				</transition>
+				<img :src="imgSrc" />
+			</div>
 		</div>
 	</div>
 </template>
@@ -44,14 +44,14 @@ export default {
 	height: 100%;
 }
 
-.transition-container .dark-layer,
-.transition-container img {
+.transition-container img,
+.dark-layer {
 	position: absolute;
 	width: 200px;
 	height: 200px;
 }
 
-.transition-container .dark-layer {
+.dark-layer {
 	z-index: 10;
 	background-color: black;
 	opacity: 0.5;
