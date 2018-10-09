@@ -88,17 +88,21 @@ export default {
 #intro {
 	display: flex;
 	justify-content: space-around;
+	// fl	ex-wrap: wrap;
 }
 
 #intro div {
 	margin: auto;
 	padding: 40px;
+	width: 50%;
 }
 
 #intro #my-photo img {
 	max-width: 30vw;
 	max-height: 30vh;
-	border-radius: 130px;
+	border-radius: 140px;
+	display: block;
+	margin: auto;
 }
 
 #intro #about-me {
@@ -134,12 +138,12 @@ export default {
 
 // general
 .fill-screen {
-	width: 100%;
-	height: 100vh;
+	min-width: 100%;
+	min-height: 100vh;
 }
 
 .fill-half-screen {
-	width: 100%;
-	height: 50vh;
+	min-width: 100%;
+	min-height: 50vh;
 }
 </style>
