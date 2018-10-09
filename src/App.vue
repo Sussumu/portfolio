@@ -17,6 +17,7 @@
 		<section id="competencies">
 			<card-hover :img-src="vueImage" message="Vue.JS" />
 			<card-hover :img-src="dotNetCoreImage" message=".NET Core" />		
+			<card-hover :img-src="sqlServerImage" message="SQL Server" />		
 		</section>
 		<section id="photos" class="fill-screen"></section>
 		<section id="contact-form" class="fill-screen"></section>
@@ -27,12 +28,14 @@
 import CardHover from "./components/CardHover.vue";
 import VueImage from "./assets/vue-card-image.jpg";
 import DotNetCoreImage from "./assets/net-core-card-image.png";
+import SqlServerImage from "./assets/sql-server-logo.png";
 
 export default {
 	data() {
 		return {
 			vueImage: VueImage,
-			dotNetCoreImage: DotNetCoreImage
+			dotNetCoreImage: DotNetCoreImage,
+			sqlServerImage: SqlServerImage
 		};
 	},
 	components: {
@@ -117,10 +120,8 @@ export default {
 	flex-wrap: wrap;
 }
 
-.card-hover {
-	border: 1px solid #000;
-	flex: 0 1 auto;
-	margin: 40px;
+#competencies .card-container {
+	margin: 60px 0;
 }
 
 #photos {
