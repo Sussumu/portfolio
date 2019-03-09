@@ -1,3 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
 $default-fonts: 'Nunito', Verdana, sans-serif;
+
+// general
+.fill-screen {
+	min-width: 100%;
+	min-height: 100vh;
+}
+
+.fill-half-screen {
+	min-width: 100%;
+	min-height: 50vh;
+}
