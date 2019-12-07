@@ -44,32 +44,31 @@ export default {
 	color: white;
 }
 
-#landing-section #my-photo img {
-	max-width: 30vw;
-	max-height: 30vh;
-	border-radius: 140px;
-	display: block;
-	margin: auto;
-}
-
 #landing-section {
 	background: url("./assets/landing-image.jpg") no-repeat center center fixed;
 	background-size: cover;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
 
-#landing-section {
-	display: flex;
-	justify-content: space-around;
-	// fl	ex-wrap: wrap;
+#landing-section div {
+	margin: 10px auto;
+	width: 100%;
 }
 
-#landing-section div {
-	margin: auto;
-	padding: 40px;
-	width: 50%;
+#landing-section #my-photo img {
+	max-width: 20vw;
+	max-height: 20vh;
+	border-radius: 140px;
+	display: block;
+	margin: auto;	
+}
+
+#landing-section #title {
+	text-align: center;
+	font-size: 46px;
 }
 
 .snap-scroll {
@@ -77,14 +76,6 @@ export default {
 	position: absolute;
 	bottom: 0;
 	left: 50%;
-}
-
-#intro #my-photo img {
-	max-width: 30vw;
-	max-height: 30vh;
-	border-radius: 140px;
-	display: block;
-	margin: auto;
 }
 
 #contact-form {
