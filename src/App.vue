@@ -5,7 +5,7 @@
 			<img src="./assets/myself.jpg" alt="a photo showing my face" />
 		</div>
 		<div id="title">GABRIEL KATO</div>		
-		<div @click="scrollToSection('contact-form')">
+		<div id="snap-scroll-wrapper" @click="scrollToSection('contact-form')">
 			<img class="snap-scroll" src="./assets/down-arrow.png" />
 		</div>	
 	</section>		
@@ -71,11 +71,14 @@ export default {
 	font-size: 46px;
 }
 
-.snap-scroll {
-	margin: 0 auto;
-	position: absolute;
+#landing-section #snap-scroll-wrapper {
+	position:absolute;
+	width:50px;
+	height:50px;
+	left: 0;
+	right: 0;
 	bottom: 0;
-	left: 50%;
+	margin: 0 auto;
 }
 
 #contact-form {
