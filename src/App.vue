@@ -5,6 +5,9 @@
 			<img src="./assets/myself.jpg" alt="a photo showing my face" />
 		</div>
 		<div id="title">GABRIEL KATO</div>		
+		<div id="social-profiles">
+			<social-profiles />
+		</div>
 		<div id="snap-scroll-wrapper" @click="scrollToSection('contact-form')">
 			<img class="snap-scroll" src="./assets/down-arrow.png" />
 		</div>	
@@ -14,7 +17,12 @@
 </template>
 
 <script>
+import SocialProfiles from "./components/SocialProfiles.vue";
+
 export default {
+	components: {
+		"social-profiles": SocialProfiles
+	},
 	methods: {
 		scrollToSection(section) {
 			this.$refs[section].scrollIntoView({
@@ -69,6 +77,10 @@ export default {
 #landing-section #title {
 	text-align: center;
 	font-size: 46px;
+}
+
+#landing-section #social-profiles {
+	text-align: center;
 }
 
 #landing-section #snap-scroll-wrapper {
