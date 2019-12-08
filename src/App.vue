@@ -1,27 +1,31 @@
 <template>
-  <div id="app">
-    <section id="landing-section" class="fill-screen">
-		<div id="my-photo">
-			<img src="./assets/myself.jpg" alt="a photo showing my face" />
-		</div>
-		<div id="title">GABRIEL KATO</div>		
-		<div id="social-profiles">
-			<social-profiles />
-		</div>
-		<div id="snap-scroll-wrapper" @click="scrollToSection('contact-form')">
-			<img class="snap-scroll" src="./assets/down-arrow.png" />
-		</div>	
-	</section>		
-	<section id="contact-form" class="fill-screen" ref="contact-form"></section>
-  </div>
+	<div id="app">
+		<section id="landing-section" class="fill-screen">
+			<div id="my-photo">
+				<img src="./assets/myself.jpg" alt="a photo showing my face" />
+			</div>
+			<div id="title">GABRIEL KATO</div>
+			<div id="social-profiles">
+				<social-profiles />
+			</div>
+			<div id="snap-scroll-wrapper" @click="scrollToSection('contact-form')">
+				<img class="snap-scroll" src="./assets/down-arrow.png" />
+			</div>
+		</section>
+		<section id="contact-form" class="fill-screen" ref="contact-form">
+			<contact-form></contact-form>
+		</section>
+	</div>
 </template>
 
 <script>
 import SocialProfiles from "./components/SocialProfiles.vue";
+import Form from "./components/ContactForm.vue";
 
 export default {
 	components: {
-		"social-profiles": SocialProfiles
+		"social-profiles": SocialProfiles,
+		"contact-form": Form
 	},
 	methods: {
 		scrollToSection(section) {
@@ -71,7 +75,7 @@ export default {
 	max-height: 20vh;
 	border-radius: 140px;
 	display: block;
-	margin: auto;	
+	margin: auto;
 }
 
 #landing-section #title {
@@ -84,9 +88,9 @@ export default {
 }
 
 #landing-section #snap-scroll-wrapper {
-	position:absolute;
-	width:50px;
-	height:50px;
+	position: absolute;
+	width: 50px;
+	height: 50px;
 	left: 0;
 	right: 0;
 	bottom: 0;
