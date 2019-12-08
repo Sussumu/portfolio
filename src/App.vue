@@ -13,7 +13,7 @@
 			</div>
 		</section>
 		<section id="contact-form" class="fill-screen" ref="contact-form">
-			<contact-form></contact-form>
+			<contact-form title="Vamos conversar?"></contact-form>
 		</section>
 	</div>
 </template>
@@ -95,9 +95,14 @@ export default {
 	right: 0;
 	bottom: 0;
 	margin: 0 auto;
+	cursor: pointer;
 }
 
 #contact-form {
-	background-color: #d1cf5a;
+	background-color: cornsilk;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;	
 }
 </style>
