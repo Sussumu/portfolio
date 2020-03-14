@@ -1,21 +1,7 @@
 # portfolio
 
-## Project setup
-```
-npm install
-```
+Repo used on my portfolio hosted in gkato.dev
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
+It's built just with Vue.js ♥
+and hosted for free in Netlify ♥
+The domain is from Google, R$50 a year
