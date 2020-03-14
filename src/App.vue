@@ -1,8 +1,8 @@
 <template>
 	<div id="app">
 		<section id="landing-section" class="fill-screen">
-			<router-view></router-view>	
-		</section>	
+			<router-view></router-view>
+		</section>
 	</div>
 </template>
 
