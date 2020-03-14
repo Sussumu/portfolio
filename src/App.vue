@@ -8,19 +8,28 @@
 			<div id="social-profiles">
 				<social-profiles />
 			</div>
-			<div id="snap-scroll-wrapper" @click="scrollToSection('contact-form')">
+			<div id="page-links">
+				<page-links>					
+				</page-links>
+			</div>
+			<div id="snap-scroll-wrapper" @click="scrollToSection('page')">
 				<img class="snap-scroll" src="./assets/down-arrow.png" />
 			</div>
+		</section>
+		<section ref="page">
+			<router-view></router-view>
 		</section>
 	</div>
 </template>
 
 <script>
 import SocialProfiles from "./components/SocialProfiles.vue";
+import PageLinks from "./components/PageLinks.vue";
 
 export default {
 	components: {
-		"social-profiles": SocialProfiles
+		"social-profiles": SocialProfiles,
+		"page-links": PageLinks
 	},
 	methods: {
 		scrollToSection(section) {
@@ -78,7 +87,8 @@ export default {
 	font-size: 46px;
 }
 
-#landing-section #social-profiles {
+#landing-section #social-profiles,
+#landing-section #page-links {
 	text-align: center;
 }
 
@@ -91,5 +101,9 @@ export default {
 	bottom: 0;
 	margin: 0 auto;
 	cursor: pointer;
+}
+
+#landing-section #page-links {
+	margin-top: 40px;
 }
 </style>
