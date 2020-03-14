@@ -1,17 +1,16 @@
 <template>
-<div>
-    <div id="my-photo">
-        <img src="../assets/myself.jpg" alt="a photo showing my face" />
-    </div>
-    <div id="title">GABRIEL KATO</div>
-    <div id="social-profiles">
-        <social-profiles />
-    </div>
-    <div id="page-links">
-        <page-links>					
-        </page-links>
-    </div>    
-</div>
+	<div>
+		<div id="my-photo">
+			<img src="../assets/myself.jpg" alt="a photo showing my face" />
+		</div>
+		<div id="title">GABRIEL KATO</div>
+		<div id="social-profiles">
+			<social-profiles />
+		</div>
+		<div id="page-links">
+			<page-links> </page-links>
+		</div>
+	</div>
 </template>
 
 <script>
