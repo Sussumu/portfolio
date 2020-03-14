@@ -12,20 +12,15 @@
 				<img class="snap-scroll" src="./assets/down-arrow.png" />
 			</div>
 		</section>
-		<section id="contact-form" class="fill-screen" ref="contact-form">
-			<contact-form title="Vamos conversar?"></contact-form>
-		</section>
 	</div>
 </template>
 
 <script>
 import SocialProfiles from "./components/SocialProfiles.vue";
-import Form from "./components/ContactForm.vue";
 
 export default {
 	components: {
-		"social-profiles": SocialProfiles,
-		"contact-form": Form
+		"social-profiles": SocialProfiles
 	},
 	methods: {
 		scrollToSection(section) {
@@ -96,13 +91,5 @@ export default {
 	bottom: 0;
 	margin: 0 auto;
 	cursor: pointer;
-}
-
-#contact-form {
-	background-color: cornsilk;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
 }
 </style>
