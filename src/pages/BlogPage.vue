@@ -25,5 +25,7 @@ export default {
 <style lang="scss" scoped>
 #page-links {
 	text-align: center;
+	position: fixed;
+	top: 0;
 }
 </style>
