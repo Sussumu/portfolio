@@ -1,9 +1,9 @@
 import LandingPage from "../pages/LandingPage.vue";
-import Blog from "../pages/Blog.vue";
+import BlogPage from "../pages/BlogPage.vue";
 
 const routes = [
 	{ path: "/home", component: LandingPage },
-	{ path: "/blog", component: Blog },
+	{ path: "/blog", component: BlogPage },
 	{ path: "*", component: LandingPage }
 ];
 
