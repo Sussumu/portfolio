@@ -10,7 +10,7 @@
 @import "./styles/main.scss";
 
 #landing-section {
-	background: url("./assets/landing-image.jpg") no-repeat center center fixed;
+	background: url("./assets/DSCF1447.jpg") no-repeat center center fixed;
 	background-size: cover;
 	display: flex;
 	flex-direction: column;
