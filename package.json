@@ -5,12 +5,14 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "netlify": "netlify"
   },
   "dependencies": {
     "eslint": "^6.7.2",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^6.2.2",
+    "sass": "^1.50.0",
     "vue": "^2.6.10",
     "vue-router": "^3.1.6"
   },
@@ -20,8 +22,8 @@
     "@vue/cli-service": "^4.2.3",
     "@vue/eslint-config-prettier": "^6.0.0",
     "babel-eslint": "^10.0.3",
-    "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.0",
+    "netlify-cli": "^9.16.6",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.10"
   }
 }
